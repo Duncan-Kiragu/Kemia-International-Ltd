@@ -41,7 +41,7 @@ a:hover {
 .banner {
   background: url(../images/al-bg.jpg) no-repeat center fixed;
   background-size: cover;
-  min-height: 800px;
+  min-height: 600px;
 }
 .banner1 {
   background: url(../images/al-bg.jpg) no-repeat center fixed;
@@ -49,7 +49,7 @@ a:hover {
   min-height: 400px;
 }
 .header {
-  padding: 1em 0;
+  padding: 0 0;
   background: blue;
 }
 .logo h1 {
@@ -116,22 +116,37 @@ ul.nav.navbar-nav li a.active {
   color: #fff !important;
 }
 .banner-bottom {
-  margin-top: 15em;
+  margin-top: 7em;
   width: 40%;
 }
 .banner-bottom h2 {
   font-size: 1.5em;
-  color: #fff;
+  color: blue;
   line-height: 1.3em;
 }
+
+/* Button on home page */
+.button1 {
+  background-color: transparent;
+  color: black;
+  border: 1px solid blue; /* Green */
+}
+
+.button2 {
+  background-color: transparent;
+  color: black;
+  border: 1px solid blue; /* Green */
+  width: 100%;
+}
+
 .bann-para {
   margin-top: 3em;
   padding: 1.5em;
-  background: rgba(62, 37, 202, 0.71);
+  background: transparent;
 }
 .bann-para p {
   font-size: 1em;
-  color: #faf9f8;
+  color: #000000;
   line-height: 1.8em;
 }
 .banner-bottom a {
@@ -185,6 +200,25 @@ ul.nav.navbar-nav li a.active {
   width: 100%;
   margin: 0 auto;
   line-height: 1.8em;
+}
+
+section.agile_stats {
+  /* background: url(../images/bg1.jpg) no-repeat center; */
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 0;
+}
+
+section.agile_stats:before {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100%;
+  content: "";
+  background: rgba(12, 12, 12, 0.18);
+  z-index: -1;
 }
 /*--welcome grid end here--*/
 /*--testimonial strat here--*/
@@ -297,16 +331,16 @@ span.quot1 {
 /*-- footer --*/
 .footer {
   padding: 4em 0;
-  background: #212121;
+  background: #000000;
 }
 .footer-grid h4 a {
   font-size: 3em;
-  color: #5c5c5c;
+  color: blue;
   text-decoration: none;
 }
 .footer-grid p {
   font-size: 0.95em;
-  color: #999;
+  color: blue;
   line-height: 1.8em;
   margin: 3em 0 2em;
 }
@@ -890,10 +924,48 @@ figure.effect-bubba:hover p {
   text-align: center;
 }
 
+/* Site category - improvise */
+.logo-wrapper1 {
+  height: 200px;
+  display: inline-block;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
 .logo-wrapper img {
   max-height: 100px;
   max-width: 100%;
 }
+
+ul#homepage {
+  display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "col1-item1 col2-item1 col3-item1"
+    "col1-item2 col2-item2 col3-item2"
+    "col1-item3 col2-item3 col3-item3"
+    "col1-item4 col2-item3 col3-item4"; 
+}
+
+/* Assign a class to each li */
+.col1-item1 { grid-area: col1-item1; }
+.col1-item2 { grid-area: col1-item2; }
+.col1-item3 { grid-area: col1-item3; }
+.col1-item4 { grid-area: col1-item4; }
+.col2-item1 { grid-area: col2-item1; }
+.col2-item2 { grid-area: col2-item2; }
+.col2-item3 { grid-area: col2-item3; }
+.col3-item1 { grid-area: col3-item1; }
+.col3-item2 { grid-area: col3-item2; }
+.col3-item3 { grid-area: col3-item3; }
+.col3-item4 { grid-area: col3-item4; }
+
+
 /*----*/
 .service h2 {
   font-size: 2.5em;
