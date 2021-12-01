@@ -11,7 +11,6 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-family: "Nixie One", cursive;
   font-weight: 700;
 }
 ul,
@@ -23,7 +22,6 @@ p {
 }
 html,
 body {
-  font-family: "Open Sans", sans-serif;
   font-size: 100%;
   background: #fff;
 }
